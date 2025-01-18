@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import './homepage.css';
 import teamLogo from '../assets/gadget_labs.svg';
 import BackgroundAnimation from '../components/backgroundAnimation';
+import Nav from '../components/nav';
 
 function Sign() {
   const containerRef = useRef(null);
@@ -16,6 +17,7 @@ function Sign() {
 
   return (
     <>
+    <Nav />
     <BackgroundAnimation 
       imageUrl={teamLogo}
       opacity={0.2}
