@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import './homepage.css';
-import reactLogo from '../assets/react.svg';
+import teamLogo from '../assets/gadget_labs.svg';
 import BackgroundAnimation from '../components/backgroundAnimation';
 
 function Sign() {
@@ -17,9 +17,8 @@ function Sign() {
   return (
     <>
     <BackgroundAnimation 
-      imageUrl={reactLogo}
+      imageUrl={teamLogo}
       opacity={0.2}
-      rotationDegree={165}
       animationDuration={90} /*render speed*/
       patternSize={100}
     >
