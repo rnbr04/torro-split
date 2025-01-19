@@ -6,6 +6,7 @@
     top: 0; /* Align to the top */
     left: 0; /* Start at the left edge */
     width: 100%; /* Span the entire width of the page */
+    height: 4rem;
     display: flex;
     align-items: center; /* Vertically align items */
     justify-content: space-between; /* Space between brand and buttons */
@@ -13,7 +14,7 @@
     background-color: rgba(168, 185, 135, 0.3); /* Light background */
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.18); /* Subtle border */
+    border-bottom: 2px solid rgba(19, 3, 3, 0.18); /* Subtle border */
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     z-index: 1000; /* Ensure it's above other elements */
   }

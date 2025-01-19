@@ -1,8 +1,8 @@
 import { useRef } from 'react';
 import './homepage.css';
-import teamLogo from '../assets/gadget_labs.svg';
 import BackgroundAnimation from '../components/backgroundAnimation';
 import Nav from '../components/nav';
+import teamLogo from '../assets/gadget_labs.svg';
 
 function Sign() {
   const containerRef = useRef(null);
