@@ -30,9 +30,9 @@ function Sign() {
           <form action="#">
             <h1>Create Account</h1>
             <span>using organization email-id</span>
-            <input type="text" placeholder="Name" required/>
-            <input type="email" placeholder="Email" required/>
-            <input type="password" placeholder="Password" required/>
+            <input type="text" placeholder="Name" required />
+            <input type="email" placeholder="Email" required />
+            <input type="password" placeholder="Password" required />
             <button>Sign Up</button>
           </form>
         </div>
@@ -40,8 +40,8 @@ function Sign() {
           <form action="#">
             <h1>Sign in</h1>
             <span>using your account</span>
-            <input type="email" placeholder="Email" required/>
-            <input type="password" placeholder="Password" required/>
+            <input type="email" placeholder="Email" required />
+            <input type="password" placeholder="Password" required />
             <a href="#" className='forgot'>Forgot your password?</a>
             <button>Sign In</button>
           </form>

@@ -7,8 +7,8 @@ import Dashboard from './pages/dashboard'
 
 function App() {
   return (
-    // <Sign/>
-    <Dashboard/>
+    // <Sign />
+    <Dashboard />
   );
 }
 export default App;

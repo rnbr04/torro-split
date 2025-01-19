@@ -23,11 +23,11 @@ const items = [
 function Dashboard() {
   return (
     <>
-      <Nav/>
+      <Nav />
       <BackgroundAnimation imageUrl={teamLogo} opacity={0.03} animationDuration={150} /*render speed*/patternSize={100}>
       <div className='content' id='dashboardcontent'>
       <div className="container" id="dashboard">
-      <SearchBox/>
+      <SearchBox />
       <ScrollableList items={items} />
       </div>
       </div>
