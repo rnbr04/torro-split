@@ -8,7 +8,7 @@
 .search-box__input {
   width: 100%;
   padding: 8px;
-  border: 1px solid #ccc;
+  border: 1px solid #8d8d8dcb;
   border-radius: 4px;
   font-size: 16px;
   background : transparent;
@@ -24,6 +24,8 @@
   color: #007bff;
   font-size: 16px;
   cursor: pointer;
+  backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
 }
 
 .search-box__button:hover {
