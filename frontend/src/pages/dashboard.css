@@ -1,20 +1,19 @@
 #dashboard{
     background: transparent;
     height: 80vh;
-	padding-left: 1.5rem;
-	padding-right: 1.5rem;
+	width: 100%;
 }
 
 
-#dashboardcontent{
+#dashboardcontent {
     background: transparent;
-	display: grid;
-	grid-template-columns: 70% 30%;
-	gap: 2rem;
-	max-width: 1600px;
-	margin: 0 auto;
-	padding-left: 2rem;
-
+    display: grid;
+    grid-template-columns: 70% 30%;
+    gap: 2rem;
+    max-width: 100%;
+    margin-top: 3rem;
+    padding-left: 1.5rem;
+    padding-right: 3.5rem;
 }
 
 
@@ -25,10 +24,19 @@
 			0 10px 10px rgba(0,0,0,0.22);
 	position: relative;
 	overflow: hidden;
-	width: 90vw;
     height: 80vh;
 	max-width: 100%;
 	min-height: 480px;
-    margin-top: 5%;
 	scrollbar-width: 0;
+	padding: 1.5rem;
+}
+
+.content {
+	background: transparent;
+	display: grid;
+	grid-template-columns: 70% 30%;
+	gap: 2rem;
+	max-width: 100vw;
+	margin: 0 auto;
+	/* margin-top: 15%; */
 }

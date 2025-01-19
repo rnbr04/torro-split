@@ -1,0 +1,16 @@
+#upload {
+    background: transparent;
+    height: 80vh;
+    /* padding: 1.5rem; */
+    /* margin-right: 1.5rem; */
+    width: 100%; /* Takes full width of its grid column */
+}
+
+#file-upload-button{
+    background: blue;
+	padding-right: 1.5rem;
+    margin-right: 2rem;
+    padding: 5px;
+    color: white;
+    
+}

@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import './dashboard.css';
 import BackgroundAnimation from '../components/backgroundAnimation';
+import Upload from '../components/fileUpload';
 import Nav from '../components/nav';
 import SearchBox from '../components/SearchBox';
 import ScrollableList from "../components/ScrollableList";
@@ -24,14 +25,17 @@ function Dashboard() {
   return (
     <>
       <Nav />
-      <BackgroundAnimation imageUrl={teamLogo} opacity={0.03} animationDuration={150} /*render speed*/patternSize={100}>
-      <div className='content' id='dashboardcontent'>
-      <div className="container" id="dashboard">
-      <SearchBox />
-      <ScrollableList items={items} />
-      </div>
-      </div>
-      </BackgroundAnimation>
+        <BackgroundAnimation imageUrl={teamLogo} opacity={0.035} animationDuration={150} /*render speed*/patternSize={125}>
+          <div className='content' id='dashboardcontent'>
+            <div className="container" id="dashboard">
+              <SearchBox />
+              <ScrollableList items={items} />
+            </div>
+            <div className="container" id="upload">
+            <Upload />
+          </div>
+          </div>
+        </BackgroundAnimation>
     </>
   )
 }
