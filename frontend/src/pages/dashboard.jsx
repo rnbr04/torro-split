@@ -21,10 +21,10 @@ const items = [
   { name: "Video5.mkv", uploadedOn: "Jan 11, 2025", size: "15 MB" },
 ];
 
-function Dashboard() {
+function Dashboard({isDarkMode, toggleDarkMode}) {
   return (
     <>
-      <Nav />
+      <Nav isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}/>
         <BackgroundAnimation imageUrl={teamLogo} opacity={0.035} animationDuration={150} /*render speed*/patternSize={125}>
           <div className='content' id='dashboardcontent'>
             <div className="container" id="dashboard">

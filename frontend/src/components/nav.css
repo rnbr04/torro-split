@@ -17,9 +17,10 @@
     border-bottom: 2px solid rgba(19, 3, 3, 0.18); /* Subtle border */
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     z-index: 1000; /* Ensure it's above other elements */
-  }
+    transition: background-color 0.3s, border-color 0.3s;
+}
   
-  .container-fluid {
+.container-fluid {
     display: flex;
     justify-content: space-between; /* This creates space between brand and buttons */
     align-items: center;
@@ -27,27 +28,29 @@
     /* max-width: 1200px; Optional: limits maximum width */
     margin: 0 auto;
 }
-  /* Navbar Brand */
-  .navbar-brand {
+
+/* Navbar Brand */
+.navbar-brand {
     display: flex;
     align-items: center; /* Vertically align logo and text */
     font-size: 1.25rem;
     font-weight: 500;
     color: #343a40; /* Dark text */
     text-decoration: none;
-  }
+    transition: color 0.3s;
+}
   
-  .navbar-brand img {
+.navbar-brand img {
     margin-right: 0.5rem;
-  }
+}
   
-  /* Navbar Buttons */
-  .navbar-buttons {
+/* Navbar Buttons */
+.navbar-buttons {
     display: flex; /* Keep buttons in a row */
     gap: 0.5rem; /* Space between buttons */
-  }
+}
   
-  .btn {
+.btn {
     display: inline-block;
     padding: 0.375rem 0.75rem;
     font-size: 0.875rem;
@@ -57,45 +60,128 @@
     border: 1px solid transparent;
     border-radius: 0.25rem;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  }
+}
   
-  .btn-outline-success {
+.btn-outline {
     color: #ffffff; /* Green color */
     border: 1px solid rgba(115, 190, 133, 0.562);
     background: rgba(0, 0, 0, 0.338);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
-  }
+}
   
-  .btn-outline-success:hover {
+.btn-outline:hover {
     color: #fff;
     background-color: #949f41;
     border-color: #949f41;
-  }
+}
   
-  .btn:focus {
+.btn:focus {
     outline: none;
     box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25); /* Focus ring */
-  }
-  
-  /* Responsive Adjustments */
-  @media (max-width: 768px) {
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
     .navbar-buttons {
-      flex-wrap: wrap;
-      gap: 0.25rem;
+        flex-wrap: wrap;
+        gap: 0.25rem;
     }
-  }
-  
-  .brand-text{
+}
+
+.brand-text {
     font-family: 'Doto', sans-serif;
     font-size: 30px;
-  }
+}
 
-  .unselectable {
+.brand-text.dark-mode{
+  color: white;
+}
+
+.unselectable {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.navbar.dark-mode {
+    background-color: #333;
+    border-color: rgba(255, 255, 255, 0.18); /* Light border for dark mode */
+}
+
+.navbar-brand.dark-mode {
+    color: #f8f9fa;
+}
+
+.navbar-buttons .btn.dark-mode {
+    border: 1px solid rgba(115, 190, 133, 0.562);
+    background: rgba(255, 255, 255, 0.338);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.navbar-buttons .btn.dark-mode:hover {
+    color: #000;
+    background-color: #949f41;
+    border-color: #949f41;
+}
+
+/* Add transition effect to body elements */
+body, .navbar, .navbar-buttons, .navbar-brand, .btn {
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+/* Dark Mode Toggle Styles */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 50px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(14px);
 }
