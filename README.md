@@ -4,7 +4,17 @@
 *Torro Split is a cutting-edge file management system that brings the power of torrent technology into the corporate world. Designed to optimize the storage and distribution of sensitive files within an enterprise, it ensures efficient, secure, and transparent file sharing. By splitting large files into encrypted chunks and distributing them across multiple nodes, Torro Split revolutionizes how organizations handle data—ensuring speed, security, and reliability.*
 
 ---
+Tech Stack :
 ---
+<img src="https://github.com/rnbr04/torro-split/raw/main/frontend/public/HTML5.svg" height="50" />
+<img src="https://github.com/rnbr04/torro-split/raw/main/frontend/public/CSS3.svg" height="50" />
+<img src="https://github.com/rnbr04/torro-split/raw/main/frontend/public/js.svg" height="50" />
+<img src="https://github.com/rnbr04/torro-split/raw/main/frontend/public/react.svg" height="50" />
+<img src="https://github.com/rnbr04/torro-split/raw/main/frontend/public/vite.svg" height="50" />
+<img src="https://github.com/rnbr04/torro-split/raw/main/frontend/public/java.svg" height="50" />
+<img src="https://github.com/rnbr04/torro-split/raw/main/frontend/public/go.svg" height="50" />
+<img src="https://github.com/rnbr04/torro-split/raw/main/frontend/public/Postgresql.svg" height="50" />
+
 ---
   
 
