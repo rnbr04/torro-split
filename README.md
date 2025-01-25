@@ -6,14 +6,7 @@
 ---
 Tech Stack :
 ---
-<img src="https://github.com/rnbr04/torro-split/raw/main/frontend/public/HTML5.svg" height="50" />
-<img src="https://github.com/rnbr04/torro-split/raw/main/frontend/public/CSS3.svg" height="50" />
-<img src="https://github.com/rnbr04/torro-split/raw/main/frontend/public/js.svg" height="50" />
-<img src="https://github.com/rnbr04/torro-split/raw/main/frontend/public/react.svg" height="50" />
-<img src="https://github.com/rnbr04/torro-split/raw/main/frontend/public/vite.svg" height="50" />
-<img src="https://github.com/rnbr04/torro-split/raw/main/frontend/public/java.svg" height="50" />
-<img src="https://github.com/rnbr04/torro-split/raw/main/frontend/public/go.svg" height="50" />
-<img src="https://github.com/rnbr04/torro-split/raw/main/frontend/public/Postgresql.svg" height="50" />
+<img src="https://github.com/rnbr04/torro-split/raw/main/frontend/public/HTML5.svg" height="50" /> <img src="https://github.com/rnbr04/torro-split/raw/main/frontend/public/CSS3.svg" height="50" /> <img src="https://github.com/rnbr04/torro-split/raw/main/frontend/public/js.svg" height="50" /> <img src="https://github.com/rnbr04/torro-split/raw/main/frontend/public/react.svg" height="50" /> <img src="https://github.com/rnbr04/torro-split/raw/main/frontend/public/vite.svg" height="50" /> <img src="https://github.com/rnbr04/torro-split/raw/main/frontend/public/java.svg" height="50" /> <img src="https://github.com/rnbr04/torro-split/raw/main/frontend/public/go.svg" height="50" /> <img src="https://github.com/rnbr04/torro-split/raw/main/frontend/public/Postgresql.svg" height="50" />
 
 ---
   
