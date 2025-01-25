@@ -1,5 +1,6 @@
 import Sign from './pages/homepage';
 import Dashboard from './pages/dashboard'
+import About from './pages/about';
 import React, {useEffect, useState} from 'react';
 
 function App() {
@@ -23,7 +24,8 @@ function App() {
 
   return (
     // <Sign isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}/>
-    <Dashboard isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}/>
+    // <Dashboard isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}/>
+    <About isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}/>
   );
 }
 

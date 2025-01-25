@@ -1,0 +1,8 @@
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+  }
