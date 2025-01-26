@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import './SearchBox.css';
+import './searchBox.css';
 
 const SearchBox = ({ placeholder, onSearch }) => {
     const [query, setQuery] = useState('');

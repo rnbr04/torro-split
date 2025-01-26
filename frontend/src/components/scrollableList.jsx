@@ -1,6 +1,5 @@
 import React from "react";
-import "./ScrollableList.css";
-import "./SearchBox.css"
+import "./scrollableList.css";
 
 const ScrollableList = ({ items }) => {
   return (

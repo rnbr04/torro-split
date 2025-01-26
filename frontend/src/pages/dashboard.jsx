@@ -3,8 +3,8 @@ import './dashboard.css';
 import BackgroundAnimation from '../components/backgroundAnimation';
 import Upload from '../components/fileUpload';
 import Nav from '../components/nav';
-import SearchBox from '../components/SearchBox';
-import ScrollableList from "../components/ScrollableList";
+import SearchBox from '../components/searchBox';
+import ScrollableList from "../components/scrollableList";
 import teamLogo from '../assets/gadget_labs.svg';
 
 
