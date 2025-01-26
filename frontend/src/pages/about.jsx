@@ -3,39 +3,41 @@ import BackgroundAnimation from '../components/backgroundAnimation';
 import Nav from '../components/nav';
 import teamLogo from '../assets/gadget_labs.svg';
 import AboutCard from '../components/aboutCard';
+import rick from '../assets/rick.svg';
+import fade from '../assets/kanak.svg';
 
 function About() {
     const teamMembers = [
         {
           name: "Prabal Bhardwaj",
-          image: "/go.svg",
-          qualifications: "CEO, Ph.D. in Computer Science",
-          details: "20 years of industry experience",
-          linkedinUrl: "https://linkedin.com/in/johndoe",
-          githubUrl: "https://github.com/johndoe"
+          image: rick,
+          qualifications: "Backend Developer",
+          details:" Led the backend development using Java, implemented the chunk server in Go, and designed the secure file chunking and retrieval mechanism.",
+          linkedinUrl: "https://www.linkedin.com/in/prabal-bhardwaj-500734315/",
+          githubUrl: "https://github.com/Bhardwaj-Prabal"
         },
         {
           name: "Abhinav Parindiyal", 
           image: "/java.svg",
-          qualifications: "CTO, M.S. in Engineering",
-          details: "Expert in AI and Machine Learning",
-          linkedinUrl: "https://linkedin.com/in/johndoe",
-          githubUrl: "https://github.com/johndoe"
+          qualifications: "Frontend Developer",
+          details: "Developed the frontend using React and collaborated on backend integration for seamless user interaction.",
+          linkedinUrl: "https://www.linkedin.com/in/abhinav-parindiyal-ba983b25a/",
+          githubUrl: "https://github.com/MrParindiyal"
         },
         {
           name: "Ranbeer Malhotra",
           image: "/Postgresql.svg", 
-          qualifications: "Lead Designer, BFA",
-          details: "Award-winning UX designer",
-          linkedinUrl: "https://linkedin.com/in/johndoe",
-          githubUrl: "https://github.com/johndoe"
+          qualifications: "Frontend Developer",
+          details: "Designed the frontend in React and assisted with backend integration to ensure a cohesive user journey.",
+          linkedinUrl: "https://www.linkedin.com/in/ranbeer-malhotra-7912a3208/",
+          githubUrl: "https://github.com/rnbr04"
         },
         {
           name: "Kanak",
-          image: "/react.svg",
-          qualifications: "Marketing Director, MBA",
-          details: "Global marketing strategy expert",
-          linkedinUrl: "https://linkedin.com/in/johndoe",
+          image: fade,
+          qualifications: "Backend developer",
+          details: "Worked on Java Spring Boot for backend development alongside Prabal and provided insights for promoting Torro Split.",
+          linkedinUrl: "https://www.linkedin.com/in/kanak-rohj-95587a2bb/",
           githubUrl: "https://github.com/johndoe"
         }
       ];

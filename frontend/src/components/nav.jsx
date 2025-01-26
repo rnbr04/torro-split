@@ -20,20 +20,30 @@ function Nav() {
           <span className='brand-text unselectable'>Torro Split</span>
         </a>
         <div className="navbar-buttons">
+          <a href="/home">
           <button className='btn btn-outline unselectable'>HOME</button>
-          <button className='btn btn-outline unselectable'>ABOUT</button>
-          <button className='btn btn-outline unselectable'>CONTACT</button>
-        {/* Dark Mode Toggle */}
-        <div className="theme-toggle">
-        <label className="switch">
-          <input 
-            type="checkbox" 
-            checked={isDarkMode}
-            onChange={toggleTheme}
-          />
-          <span className="slider"></span>
-        </label>
-      </div>
+          </a>
+          <a href="/about">
+            <button className='btn btn-outline unselectable'>ABOUT</button>
+
+          </a>
+          <a href="/contact">
+          <button className='btn btn-outline unselectable'>CONTACT US</button>
+          </a>
+          <a href="/signup">
+          <button className='btn btn-outline unselectable'>SIGN UP</button>
+          </a>
+          {/* Dark Mode Toggle */}
+          <div className="theme-toggle">
+            <label className="switch">
+              <input
+                type="checkbox"
+                checked={isDarkMode}
+                onChange={toggleTheme}
+              />
+              <span className="slider"></span>
+            </label>
+          </div>
         </div>
       </div>
     </nav>
