@@ -12,6 +12,21 @@ function Dashboard({isDarkMode, toggleDarkMode}) {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  // for UI testing
+  const testFilesForUI = [
+    { name: "Document1.pdx", uploadedOn: "Jan 15, 2025", size: "2 MB" },
+    { name: "Presentation2.txt", uploadedOn: "Jan 14, 2025", size: "5 MB" },
+    { name: "Spreadsheet3.xlsx", uploadedOn: "Jan 13, 2025", size: "1 MB" },
+    { name: "Image4.webp", uploadedOn: "Jan 12, 2025", size: "3 MB" },
+    { name: "Video5.mkv", uploadedOn: "Jan 11, 2025", size: "15 MB" },
+    { name: "Document1.pdx", uploadedOn: "Jan 15, 2025", size: "2 MB" },
+    { name: "Presentation2.txt", uploadedOn: "Jan 14, 2025", size: "5 MB" },
+    { name: "Spreadsheet3.xlsx", uploadedOn: "Jan 13, 2025", size: "1 MB" },
+    { name: "Image4.webp", uploadedOn: "Jan 12, 2025", size: "3 MB" },
+    { name: "Video5.mkv", uploadedOn: "Jan 11, 2025", size: "15 MB" },
+  ];
+  // 
+
   useEffect(() => {
     const fetchFiles = async () => {
       try {
@@ -58,6 +73,7 @@ function Dashboard({isDarkMode, toggleDarkMode}) {
           <div className='content' id='dashboardcontent'>
             <div className="container" id="dashboard">
               <SearchBox />
+              {/* <ScrollableList items={testFilesForUI} /> */}
               {isLoading ? (
                 <div className="loading">Loading files...</div>
               ) : error ? (
