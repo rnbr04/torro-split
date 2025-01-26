@@ -23,7 +23,6 @@ function Dashboard({isDarkMode, toggleDarkMode}) {
 
         const data = await response.json();
 
-        // Transform the data to match the ScrollableList component's expected format
         const transformedFiles = data.map(file => ({
           name: file.fileName,
           uploadedOn: new Date(file.uploadedDate).toLocaleDateString('en-US', {
@@ -45,31 +44,7 @@ function Dashboard({isDarkMode, toggleDarkMode}) {
     };
 
     fetchFiles();
-  }, []); // Empty dependency array means this effect runs once on mount
-
-  // Render loading state
-  if (isLoading) {
-    return (
-      <>
-        <Nav isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}/>
-        <div className="content" id="dashboardcontent">
-          <div className="loading">Loading files...</div>
-        </div>
-      </>
-    );
-  }
-
-  // Render error state
-  if (error) {
-    return (
-      <>
-        <Nav isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}/>
-        <div className="content" id="dashboardcontent">
-          <div className="error">Error: {error}</div>
-        </div>
-      </>
-    );
-  }
+  }, []);
 
   return (
     <>
@@ -83,7 +58,13 @@ function Dashboard({isDarkMode, toggleDarkMode}) {
           <div className='content' id='dashboardcontent'>
             <div className="container" id="dashboard">
               <SearchBox />
-              <ScrollableList items={files} />
+              {isLoading ? (
+                <div className="loading">Loading files...</div>
+              ) : error ? (
+                <div className="error">Error: {error}</div>
+              ) : (
+                <ScrollableList items={files} />
+              )}
             </div>
             <div className="container" id="upload">
               <Upload />

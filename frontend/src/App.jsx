@@ -22,7 +22,7 @@ function App() {
                 <Routes>
                     <Route
                         exact
-                        path="/"
+                        path="/dashboard"
                         element={<ThemeProvider><Dashboard/></ThemeProvider>}
                     />
 
