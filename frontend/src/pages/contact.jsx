@@ -4,7 +4,7 @@ import Nav from '../components/nav';
 import teamLogo from '../assets/gadget_labs.svg';
 import './contact.css';
 
-const Contact = ({isDarkMode, toggleDarkMode}) => {
+const Contact = () => {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -38,7 +38,7 @@ const Contact = ({isDarkMode, toggleDarkMode}) => {
 
   return (
     <>
-    <Nav isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}/>
+    <Nav/>
     <BackgroundAnimation 
       imageUrl={teamLogo}
       opacity={0.1}

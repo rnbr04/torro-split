@@ -1,55 +1,73 @@
 @import url('https://fonts.googleapis.com/css2?family=Doto:wght,ROND@900,55&display=swap');
 
+/* Dark Mode Additional Variables */
+:root {
+    --navbar-bg: rgba(168, 185, 135, 0.3);
+    --navbar-border: rgba(19, 3, 3, 0.18);
+    --btn-text: #ffffff;
+    --btn-border: rgba(115, 190, 133, 0.562);
+    --btn-bg: rgba(0, 0, 0, 0.338);
+    --btn-hover-bg: #949f41;
+    --btn-hover-border: #949f41;
+  }
+  
+  [data-theme='dark'] {
+    --navbar-bg: #333;
+    --navbar-border: rgba(255, 255, 255, 0.18);
+    --btn-text: #f8f9fa;
+    --btn-border: rgba(115, 190, 133, 0.562);
+    --btn-bg: rgba(255, 255, 255, 0.338);
+    --btn-hover-bg: #949f41;
+    --btn-hover-border: #949f41;
+  }
+
 /* Base Navbar Styles */
 .navbar {
-    position: fixed; /* Stick to the top of the page */
-    top: 0; /* Align to the top */
-    left: 0; /* Start at the left edge */
-    width: 100%; /* Span the entire width of the page */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 4rem;
     display: flex;
-    align-items: center; /* Vertically align items */
-    justify-content: space-between; /* Space between brand and buttons */
+    align-items: center;
+    justify-content: space-between;
     padding: 0.5rem 1rem;
-    background-color: rgba(168, 185, 135, 0.3); /* Light background */
+    background-color: var(--navbar-bg, rgba(168, 185, 135, 0.3));
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    border-bottom: 2px solid rgba(19, 3, 3, 0.18); /* Subtle border */
+    border-bottom: 2px solid var(--navbar-border, rgba(19, 3, 3, 0.18));
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    z-index: 1000; /* Ensure it's above other elements */
+    z-index: 1000;
     transition: background-color 0.3s, border-color 0.3s;
 }
-  
+
 .container-fluid {
     display: flex;
-    justify-content: space-between; /* This creates space between brand and buttons */
+    justify-content: space-between;
     align-items: center;
     width: 100%;
-    /* max-width: 1200px; Optional: limits maximum width */
     margin: 0 auto;
 }
 
-/* Navbar Brand */
 .navbar-brand {
     display: flex;
-    align-items: center; /* Vertically align logo and text */
+    align-items: center;
     font-size: 1.25rem;
     font-weight: 500;
-    color: #343a40; /* Dark text */
+    color: var(--text-primary);
     text-decoration: none;
     transition: color 0.3s;
 }
-  
+
 .navbar-brand img {
     margin-right: 0.5rem;
 }
-  
-/* Navbar Buttons */
+
 .navbar-buttons {
-    display: flex; /* Keep buttons in a row */
-    gap: 0.5rem; /* Space between buttons */
+    display: flex;
+    gap: 0.5rem;
 }
-  
+
 .btn {
     display: inline-block;
     padding: 0.375rem 0.75rem;
@@ -61,24 +79,25 @@
     border-radius: 0.25rem;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
-  
+
 .btn-outline {
-    color: #ffffff; /* Green color */
-    border: 1px solid rgba(115, 190, 133, 0.562);
-    background: rgba(0, 0, 0, 0.338);
+    color: var(--btn-text, #ffffff);
+    border: 1px solid var(--btn-border, rgba(115, 190, 133, 0.562));
+    background: var(--btn-bg, rgba(0, 0, 0, 0.338));
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
 }
-  
+
 .btn-outline:hover {
     color: #fff;
-    background-color: #949f41;
-    border-color: #949f41;
+    background-color: var(--btn-hover-bg, #949f41);
+    border-color: var(--btn-hover-border, #949f41);
 }
-  
-.btn:focus {
-    outline: none;
-    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25); /* Focus ring */
+
+.brand-text {
+    font-family: 'Doto', sans-serif;
+    font-size: 30px;
+    color: var(--text-primary);
 }
 
 /* Responsive Adjustments */
@@ -89,60 +108,7 @@
     }
 }
 
-.brand-text {
-    font-family: 'Doto', sans-serif;
-    font-size: 30px;
-}
-
-.brand-text.dark-mode{
-  color: white;
-}
-
-.unselectable {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-/* Dark Mode Styles */
-body.dark-mode {
-    background-color: #121212;
-    color: white;
-}
-
-.dark-mode-toggle{
-    align-content: center;
-    
-}
-.navbar.dark-mode {
-    background-color: #333;
-    border-color: rgba(255, 255, 255, 0.18); /* Light border for dark mode */
-}
-
-.navbar-brand.dark-mode {
-    color: #f8f9fa;
-}
-
-.navbar-buttons .btn.dark-mode {
-    border: 1px solid rgba(115, 190, 133, 0.562);
-    background: rgba(255, 255, 255, 0.338);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-}
-
-.navbar-buttons .btn.dark-mode:hover {
-    color: #000;
-    background-color: #949f41;
-    border-color: #949f41;
-}
-
-/* Add transition effect to body elements */
-body, .navbar, .navbar-buttons, .navbar-brand, .btn {
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-}
+/*  */
 
 /* Dark Mode Toggle Styles */
 .switch {
@@ -188,4 +154,13 @@ input:checked + .slider {
 
 input:checked + .slider:before {
     transform: translateX(14px);
+}
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }

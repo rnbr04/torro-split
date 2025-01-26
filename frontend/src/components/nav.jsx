@@ -1,10 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, {useContext} from 'react';
+import { ThemeContext } from './themeContextProvider';
 import './nav.css';
 
-function Nav({ isDarkMode, toggleDarkMode }) {
+function Nav() {
 
+  const { isDarkMode, toggleTheme } = useContext(ThemeContext);
+  
   return (
-    <nav className={`navbar ${isDarkMode ? 'dark-mode' : ''}`}>
+    <nav className='navbar'>
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
           <img
@@ -12,30 +15,31 @@ function Nav({ isDarkMode, toggleDarkMode }) {
             alt="Brand Logo"
             width="40"
             height="40"
-            className="d-inline-block align-top"
+            className="d-inline-block align-top unselectable"
           />
-          <span className={`brand-text ${isDarkMode ? 'dark-mode' : ''} unselectable`}>Torro Split</span>
+          <span className='brand-text unselectable'>Torro Split</span>
         </a>
         <div className="navbar-buttons">
-          <a href="/home" className={`btn btn-outline ${isDarkMode ? 'dark-mode' : ''}`}>
-            HOME
+          <a href="/home">
+          <button className='btn btn-outline unselectable'>HOME</button>
           </a>
-          <a href="/about" className={`btn btn-outline ${isDarkMode ? 'dark-mode' : ''}`}>
-            ABOUT
+          <a href="/about">
+            <button className='btn btn-outline unselectable'>ABOUT</button>
+
           </a>
-          <a href="/contact" className={`btn btn-outline ${isDarkMode ? 'dark-mode' : ''}`}>
-            CONTACT US
+          <a href="/contact">
+          <button className='btn btn-outline unselectable'>CONTACT US</button>
           </a>
-          <a href="/signup" className={`btn btn-outline ${isDarkMode ? 'dark-mode' : ''}`}>
-            SIGN UP
+          <a href="/signup">
+          <button className='btn btn-outline unselectable'>SIGN UP</button>
           </a>
           {/* Dark Mode Toggle */}
-          <div className="dark-mode-toggle">
+          <div className="theme-toggle">
             <label className="switch">
               <input
                 type="checkbox"
                 checked={isDarkMode}
-                onChange={toggleDarkMode}
+                onChange={toggleTheme}
               />
               <span className="slider"></span>
             </label>

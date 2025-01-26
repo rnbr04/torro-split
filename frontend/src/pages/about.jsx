@@ -6,7 +6,7 @@ import AboutCard from '../components/aboutCard';
 import rick from '../assets/rick.svg';
 import fade from '../assets/kanak.svg';
 
-function About({isDarkMode, toggleDarkMode}) {
+function About() {
     const teamMembers = [
         {
           name: "Prabal Bhardwaj",
@@ -44,7 +44,7 @@ function About({isDarkMode, toggleDarkMode}) {
 
   return (
     <>
-    <Nav isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}/>
+    <Nav/>
     <BackgroundAnimation 
       imageUrl={teamLogo}
       opacity={0.1}
