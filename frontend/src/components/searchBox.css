@@ -1,52 +1,52 @@
 :root {
   /* Light Mode Variables */
-  --search-input-border: #8d8d8dcb;
-  --search-button-border: #3182ce;
-  --search-button-text: #007bff;
-  --search-button-hover-bg: #0056b3;
-  --search-button-hover-text: #fff;
-}
-
-[data-theme='dark'] {
+  --search-input-border:#8d8d8dcb;
+  --search-button-border:#3182ce;
+  --search-button-text:#007bff;
+  --search-button-hover-bg:#0056b3;
+  --search-button-hover-text:#fff
+  }
+  
+  [data-theme='dark'] {
   /* Dark Mode Variables */
-  --search-input-border: #555;
-  --search-button-border: #4a90e2;
-  --search-button-text: #4a90e2;
-  --search-button-hover-bg: #357abd;
-  --search-button-hover-text: #fff;
-}
-
-.search-box {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding-top: 1%;
-}
-
-.search-box__input {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid var(--search-input-border);
-  border-radius: 4px;
-  font-size: 16px;
-  background: transparent;
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-}
-
-.search-box__button {
-  padding: 8px 8px;
-  border: 1px solid var(--search-button-border);
-  border-radius: 4px;
-  background-color: transparent;
-  color: var(--search-button-text);
-  font-size: 16px;
-  cursor: pointer;
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-}
-
-.search-box__button:hover {
-  background-color: var(--search-button-hover-bg);
-  color: var(--search-button-hover-text);
-}
+  --search-input-border:#555;
+  --search-button-border:#1f456c;
+  --search-button-text:#4a90e2;
+  --search-button-hover-bg:#1f456c;
+  --search-button-hover-text:#fff
+  }
+  
+  .search-box {
+  display:flex;
+  align-items:center;
+  gap:8px;
+  padding-top:1%
+  }
+  
+  .search-box__input {
+  width:100%;
+  padding:8px;
+  border:1px solid var(--search-input-border);
+  border-radius:4px;
+  font-size:16px;
+  background:transparent;
+  backdrop-filter:blur(4px);
+  -webkit-backdrop-filter:blur(4px)
+  }
+  
+  .search-box__button {
+  padding:8px;
+  border:1px solid var(--search-button-border);
+  border-radius:4px;
+  background-color:transparent;
+  color:var(--search-button-text);
+  font-size:16px;
+  cursor:pointer;
+  backdrop-filter:blur(4px);
+  -webkit-backdrop-filter:blur(4px)
+  }
+  
+  .search-box__button:hover {
+  background-color:var(--search-button-hover-bg);
+  color:var(--search-button-hover-text)
+  }

@@ -1,96 +1,205 @@
-#upload {
-    background: transparent;
-    height: 80vh;
-    /* padding: 1.5rem; */
-    /* margin-right: 1.5rem; */
-    width: 100%; /* Takes full width of its grid column */
+@import "https://fonts.googleapis.com/css2?family=Oxygen&display=swap";
+
+:root {
+/* Light Mode Variables */
+--upload-button-bg:blue;
+--upload-button-text:#fff;
+--drop-zone-border:#ccc;
+--drop-zone-bg:#f9f9f9;
+--drop-zone-hover-border:#28a745;
+--drop-zone-hover-bg:#e6ffe6;
+--drop-zone-hover-shadow:#28a745;
+--icon-color:#ccc;
+--icon-hover-color:#28a745;
+--message-text:#555;
+--message-hover-text:#28a745;
+--subtext-color:#999;
+--subtext-hover-color:#28a745;
+--file-list-text:#555;
+--custom-file-input-bg:#4a90e2;
+--custom-file-input-text:#fff;
+--custom-file-input-border:transparent;
+--custom-file-input-hover-bg:#357abd;
+--button-effect:#fff3
 }
 
-#file-upload-button{
-    background: blue;
-	padding-right: 1.5rem;
-    margin-right: 2rem;
-    padding: 5px;
-    color: white;
-    
+[data-theme='dark'] {
+/* Dark Mode Variables */
+--upload-button-bg:#4a90e2;
+--upload-button-text:#fff;
+--drop-zone-border:#444;
+--drop-zone-bg:#1e1e1e;
+--drop-zone-hover-border:#3cb371;
+--drop-zone-hover-bg:#1a332a;
+--drop-zone-hover-shadow:#3cb371;
+--icon-color:#666;
+--icon-hover-color:#3cb371;
+--message-text:#a0a0a0;
+--message-hover-text:#3cb371;
+--subtext-color:#777;
+--subtext-hover-color:#3cb371;
+--file-list-text:#a0a0a0;
+--custom-file-input-bg:#2c3e50;
+--custom-file-input-text:#fff;
+--custom-file-input-border:#4a90e2;
+--custom-file-input-hover-bg:#206ab3a4;
+--button-effect:#0003
+}
+
+#upload {
+background:transparent;
+height:80vh;
+width:100%
+}
+
+#file-upload-button {
+background:var(--upload-button-bg);
+padding-right:1.5rem;
+margin-right:2rem;
+padding:5px;
+color:var(--upload-button-text)
 }
 
 .drop-zone {
-    width: 100%;
-    min-height: 200px;
-    border: 2px dashed #ccc;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    background-color: #f9f9f9;
-  }
-  
-  .drop-zone-hover {
-    border-color: #28a745;
-    background-color: #e6ffe6;
-    box-shadow: 0 0 10px #28a745;
-  }
-  
-  .drop-zone-content {
-    text-align: center;
-    padding: 16px;
-    pointer-events: none; /* Prevent child elements from interfering with drag events */
-  }
-  
-  .icon {
-    width: 48px;
-    height: 48px;
-    color: #ccc;
-    transition: color 0.3s;
-  }
-  
-  .drop-zone-hover .icon {
-    color: #28a745;
-  }
-  
-  .message {
-    margin-top: 12px;
-    font-size: 14px;
-    color: #555;
-    transition: color 0.3s;
-  }
-  
-  .message-hover {
-    color: #28a745;
-  }
-  
-  .subtext {
-    margin-top: 4px;
-    font-size: 12px;
-    color: #999;
-    transition: color 0.3s;
-  }
-  
-  .subtext-hover {
-    color: #28a745;
-  }
-  
-  .file-list {
-    margin-top: 16px;
-  }
-  
-  .file-list h4 {
-    font-size: 14px;
-    margin-bottom: 8px;
-  }
-  
-  .file-list ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .file-list li {
-    font-size: 12px;
-    color: #555;
-    margin-bottom: 4px;
-  }
-  
+width:100%;
+min-height:300px;
+border:2px dashed var(--drop-zone-border);
+border-radius:8px;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+cursor:pointer;
+transition:all .3s ease-in-out;
+background-color:var(--drop-zone-bg)
+}
+
+.drop-zone-hover {
+border-color:var(--drop-zone-hover-border);
+background-color:var(--drop-zone-hover-bg);
+box-shadow:0 0 10px var(--drop-zone-hover-shadow)
+}
+
+.drop-zone-content {
+text-align:center;
+padding:10px;
+pointer-events:none
+}
+
+.message,.subtext,.message-hover,.subtext-hover {
+font-family:'Oxygen',cursive,Verdana,Geneva,Tahoma,sans-serif;
+font-size:1.2rem;
+font-weight:800
+}
+
+.subtext-hover,.subtext {
+font-size:1.2rem
+}
+
+.icon {
+width:48px;
+height:48px;
+color:var(--icon-color);
+transition:color .3s
+}
+
+.drop-zone-hover .icon {
+color:var(--icon-hover-color)
+}
+
+.message {
+margin-top:1px;
+color:var(--message-text);
+transition:color .3s
+}
+
+.message-hover {
+color:var(--message-hover-text);
+font-size:2rem
+}
+
+.subtext {
+margin-top:2px;
+color:var(--subtext-color);
+transition:color .3s
+}
+
+.subtext-hover {
+color:var(--subtext-hover-color)
+}
+
+.file-list {
+margin-top:16px
+}
+
+.file-list h4 {
+font-size:14px;
+margin-bottom:8px;
+color:var(--file-list-text)
+}
+
+.file-list ul {
+list-style:none;
+padding:0
+}
+
+.file-list li {
+font-size:12px;
+color:var(--file-list-text);
+margin-bottom:4px
+}
+
+/* Hide the default file input but keep it functional */
+.file-input {
+opacity:0;
+width:.1px;
+height:.1px;
+position:absolute
+}
+
+/* Create a custom styled button */
+.file-input-label {
+font-family:'Doto',Verdana,Geneva,Tahoma,sans-serif;
+font-size:1.4rem;
+font-weight:800;
+display:inline-block;
+padding:12px 24px;
+background:var(--custom-file-input-bg);
+color:var(--custom-file-input-text);
+border-radius:6px;
+cursor:pointer;
+transition:all .3s ease;
+border:1px solid var(--custom-file-input-border,transparent)
+}
+
+.file-input-label:hover {
+background:var(--custom-file-input-hover-bg);
+transform:translateY(-1px)
+}
+
+.file-input-label:active {
+transform:translateY(0)
+}
+
+.file-input-label::after {
+content:'';
+position:absolute;
+top:0;
+left:-100%;
+width:100%;
+height:100%;
+background:linear-gradient(90deg,transparent,var(--button-effect),transparent);
+transition:.3s
+}
+
+.file-input-label:hover::after {
+left:200%
+}
+
+.button-holder {
+flex-direction:row;
+align-content:center;
+justify-self:center;
+margin-top:20px;
+margin-bottom:50px
+}
