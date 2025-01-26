@@ -23,21 +23,21 @@ function App() {
                     <Route
                         exact
                         path="/"
-                        element={<About/>}
+                        element={<ThemeProvider><Dashboard/></ThemeProvider>}
                     />
 
                     <Route
                         path="/about"
-                        element={<About />}
+                        element={<ThemeProvider><About/></ThemeProvider>}
                     />
                     <Route
                         path="/contact"
-                        element={<Contact />}
+                        element={<ThemeProvider><Contact/></ThemeProvider>}
                     />
 
                     <Route
                         path="/signup"
-                        element={<Sign/>}
+                        element={<ThemeProvider><Sign/></ThemeProvider>}
                     />
                 </Routes>
             </Router>

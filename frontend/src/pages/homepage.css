@@ -1,54 +1,44 @@
-/* #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-} */
-
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
-
-* {
-	box-sizing: border-box;
-}
-
-body {
-	background: #f6f5f7;
+:root {
+	/* Light Mode Variables */
+	--body-bg: #f6f5f7;
+	--button-border: #FF4B2B;
+	--button-bg: #b7e60d;
+	--button-hover-border: #07973e;
+	--button-hover-bg: #76ff53;
+	--button-ghost-hover-bg: #0000003d;
+	--form-bg: #FFFFFF;
+	--input-bg: #eee;
+	--container-bg: #fff;
+	--container-shadow-1: rgba(0,0,0,0.25);
+	--container-shadow-2: rgba(0,0,0,0.22);
+	--overlay-bg-1: #5e7528;
+	--overlay-bg-2: #949f41;
+	--text-primary: #333;
+	--text-secondary: #888;
+  }
+  
+  [data-theme='dark'] {
+	/* Dark Mode Variables */
+	--body-bg: #121212;
+	--button-border: #4a90e2;
+	--button-bg: #2c3e50;
+	--button-hover-border: #357abd;
+	--button-hover-bg: #34495e;
+	--button-ghost-hover-bg: #ffffff1a;
+	--form-bg: #1e1e1e;
+	--input-bg: #2c2c2c;
+	--container-bg: #1a1a1a;
+	--container-shadow-1: rgba(255,255,255,0.1);
+	--container-shadow-2: rgba(255,255,255,0.05);
+	--overlay-bg-1: #2c3e50;
+	--overlay-bg-2: #34495e;
+	--text-primary: #e0e0e0;
+	--text-secondary: #a0a0a0;
+  }
+  
+  body {
+	background: var(--body-bg);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -56,15 +46,22 @@ body {
 	font-family: 'Montserrat', sans-serif;
 	height: 100vh;
 	margin: -20px 0 50px;
+  }
+
+* {
+	box-sizing: border-box;
 }
+
 
 h1 {
 	font-weight: bold;
 	margin: 0;
+	color: var(--text-primary);
 }
 
 h2 {
 	text-align: center;
+	color: var(--text-primary);
 }
 
 p {
@@ -77,20 +74,21 @@ p {
 
 span {
 	font-size: 12px;
+	color: var(--text-primary);
 }
 
 a {
-	color: #333;
+	color: var(--text-primary);
 	font-size: 14px;
 	text-decoration: none;
 	margin: 15px 0;
 }
 
-button {
+button {	
 	border-radius: 20px;
-	border: 1px solid #FF4B2B;
-	background-color: #b7e60d;
-	color: #000000;
+	border: 1px solid var(--button-border);
+	background-color: var(--button-bg);
+	/* color: #000000; */
 	font-size: 12px;
 	font-weight: bold;
 	padding: 12px 45px;
@@ -108,9 +106,9 @@ button:focus {
 }
 
 button:hover {
-	border: 1px solid #07973e;
-	background-color: #76ff53;
-	color: #000000;
+	border: 1px solid var(--button-hover-border);
+	background-color: var(--button-hover-bg);
+	/* color: #000000; */
 	cursor: pointer;
 }
 
@@ -121,7 +119,7 @@ button.ghost {
 }
 
 button.ghost:hover {
-	background-color: #0000003d;
+	background-color: var(--button-ghost-hover-bg);
 	color: #FFFFFF;
 }
 
@@ -130,7 +128,7 @@ button.ghost:hover {
 }
 
 form {
-	background-color: #FFFFFF;
+	background-color: var(--form-bg);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -141,7 +139,7 @@ form {
 }
 
 input {
-	background-color: #eee;
+	background-color: var(--input-bg);
 	border: none;
 	padding: 12px 15px;
 	margin: 8px 0;
@@ -149,10 +147,11 @@ input {
 }
 
 .container {
-	background-color: #fff;
+	background-color: var(--container-bg);
+	box-shadow: 0 14px 28px var(--container-shadow-1), 
+				0 10px 10px var(--container-shadow-2);
 	border-radius: 10px;
-  	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
-			0 10px 10px rgba(0,0,0,0.22);
+  	
 	position: relative;
 	overflow: hidden;
 	width: 768px;
@@ -219,9 +218,9 @@ input {
 }
 
 .overlay {
-	background: #949f41;
-	background: -webkit-linear-gradient(to right, #5e7528, #949f41);
-	background: linear-gradient(to right, #809D3C, #949f41);
+	background: var(--overlay-bg-1);
+	background: -webkit-linear-gradient(to right, var(--overlay-bg-1), var(--overlay-bg-2));
+	background: linear-gradient(to right, var(--overlay-bg-1), var(--overlay-bg-2));
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;

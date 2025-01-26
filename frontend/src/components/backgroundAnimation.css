@@ -1,3 +1,19 @@
+:root {
+  /* Light Mode Variables */
+  --pattern-background-color: white;
+  --pattern-opacity: 0.3;
+  --pattern-size: 100px;
+  --animation-duration: 10s;
+}
+
+[data-theme='dark'] {
+  /* Dark Mode Variables */
+  --pattern-background-color: #121212;
+  --pattern-opacity: 0.2;
+  --pattern-size: 100px;
+  --animation-duration: 10s;
+}
+
 .pattern-background-wrapper {
     position: fixed;
     top: 0;
@@ -5,7 +21,7 @@
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    background-color: white;
+    background-color: var(--pattern-background-color);
   }
   
   .pattern-content {
