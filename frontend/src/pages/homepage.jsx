@@ -17,7 +17,7 @@ function Sign() {
 
   return (
     <>
-    <Nav isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}/>
+    <Nav/>
     <BackgroundAnimation 
       imageUrl={teamLogo}
       opacity={0.2}

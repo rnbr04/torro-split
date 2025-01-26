@@ -1,10 +1,13 @@
-import React, {useState, useEffect} from 'react';
+import React, {useContext} from 'react';
+import { ThemeContext } from './themeContextProvider';
 import './nav.css';
 
-function Nav({isDarkMode, toggleDarkMode}) {
+function Nav() {
 
+  const { isDarkMode, toggleTheme } = useContext(ThemeContext);
+  
   return (
-    <nav className={`navbar ${isDarkMode ? 'dark-mode' : ''}`}>
+    <nav className='navbar'>
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
           <img
@@ -12,25 +15,25 @@ function Nav({isDarkMode, toggleDarkMode}) {
             alt="Brand Logo"
             width="40"
             height="40"
-            className="d-inline-block align-top"
+            className="d-inline-block align-top unselectable"
           />
-          <span className={`brand-text ${isDarkMode ? 'dark-mode' : ''} unselectable`}>Torro Split</span>
+          <span className='brand-text unselectable'>Torro Split</span>
         </a>
         <div className="navbar-buttons">
-          <button className={`btn btn-outline ${isDarkMode ? 'dark-mode' : ''}`}>HOME</button>
-          <button className={`btn btn-outline ${isDarkMode ? 'dark-mode' : ''}`}>ABOUT</button>
-          <button className={`btn btn-outline ${isDarkMode ? 'dark-mode' : ''}`}>CONTACT</button>
+          <button className='btn btn-outline unselectable'>HOME</button>
+          <button className='btn btn-outline unselectable'>ABOUT</button>
+          <button className='btn btn-outline unselectable'>CONTACT</button>
         {/* Dark Mode Toggle */}
-        <div className="dark-mode-toggle">
-          <label className="switch">
-            <input
-              type="checkbox"
-              checked={isDarkMode}
-              onChange={toggleDarkMode}
-            />
-            <span className="slider"></span>
-          </label>
-        </div>
+        <div className="theme-toggle">
+        <label className="switch">
+          <input 
+            type="checkbox" 
+            checked={isDarkMode}
+            onChange={toggleTheme}
+          />
+          <span className="slider"></span>
+        </label>
+      </div>
         </div>
       </div>
     </nav>

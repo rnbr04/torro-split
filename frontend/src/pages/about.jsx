@@ -4,7 +4,7 @@ import Nav from '../components/nav';
 import teamLogo from '../assets/gadget_labs.svg';
 import AboutCard from '../components/aboutCard';
 
-function About({isDarkMode, toggleDarkMode}) {
+function About() {
     const teamMembers = [
         {
           name: "Prabal Bhardwaj",
@@ -42,7 +42,7 @@ function About({isDarkMode, toggleDarkMode}) {
 
   return (
     <>
-    <Nav isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}/>
+    <Nav/>
     <BackgroundAnimation 
       imageUrl={teamLogo}
       opacity={0.1}

@@ -24,7 +24,7 @@ const items = [
 function Dashboard({isDarkMode, toggleDarkMode}) {
   return (
     <>
-      <Nav isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}/>
+      <Nav/>
         <BackgroundAnimation imageUrl={teamLogo} opacity={0.035} animationDuration={150} /*render speed*/patternSize={125}>
           <div className='content' id='dashboardcontent'>
             <div className="container" id="dashboard">
