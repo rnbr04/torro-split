@@ -22,6 +22,12 @@ function App() {
                 <Routes>
                     <Route
                         exact
+                        path="/"
+                        element={<ThemeProvider><Sign/></ThemeProvider>}
+                    />
+
+                    <Route
+                        exact
                         path="/dashboard"
                         element={<ThemeProvider><Dashboard/></ThemeProvider>}
                     />
