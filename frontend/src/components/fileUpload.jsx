@@ -45,13 +45,19 @@ const Upload = () => {
 
   return (
     <div className="upload-container">
+     <div className='button-holder'>
       <input
         type="file"
         ref={fileInputRef}
         onChange={handleFileSelect}
         className="file-input"
         multiple
+        id="file-input"
       />
+      <label htmlFor="file-input" className="file-input-label">
+        Choose Files to upload
+      </label>
+    </div>
       
       <div
         onClick={openFileDialog}
@@ -68,13 +74,13 @@ const Upload = () => {
             </svg>
           ) : (
             <svg className="icon" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
-              <path d="M24 8v20m0-20l-8 8m8-8l8 8m-8 12h.01" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M24 8v27m0-28l-8 8m8-8l8 8m-8 12h.01" stroke-width="5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           )}
           <p className={`message ${isDragging ? 'message-hover' : ''}`}>
-            {isDragging ? 'Drop to upload' : 'Click to upload or drag and drop'}
+            {isDragging ? 'Drop to upload' : 'Drag and drop or Click to upload'}
           </p>
-          <p className={`subtext ${isDragging ? 'subtext-hover' : ''}`}>Any file up to 10MB</p>
+          {/* <p className={`subtext ${isDragging ? 'subtext-hover' : ''}`}>Upto 10 MB</p> */} 
         </div>
       </div>
 
