@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import './homepage.css';
 import BackgroundAnimation from '../components/backgroundAnimation';
+import Button from '../components/button';
 import Nav from '../components/nav';
 import teamLogo from '../assets/gadget_labs.svg';
 
@@ -33,7 +34,7 @@ function Sign() {
               <input type="text" placeholder="Name" required />
               <input type="email" placeholder="Email" required />
               <input type="password" placeholder="Password" required />
-              <button>Sign Up</button>
+              <Button btntext='Sign Up' btntype='submit'/>
             </form>
           </div>
           <div className="form-container sign-in-container">
@@ -43,7 +44,7 @@ function Sign() {
               <input type="email" placeholder="Email" required />
               <input type="password" placeholder="Password" required />
               <a href="#" className='forgot'>Forgot your password?</a>
-              <button>Sign In</button>
+              <Button btntext='Sign In' btntype='submit'/>  
             </form>
           </div>
           <div className="overlay-container">
@@ -51,16 +52,20 @@ function Sign() {
               <div className="overlay-panel overlay-left">
                 <h1>Already have an account?</h1>
                 <p>Log into an existing account</p>
-                <button className="ghost" id="signIn" onClick={handleSignInClick}>
-                  Sign In
-                </button>
+                <Button 
+                btnclasses="ghost" 
+                btnid="signIn" 
+                btnclick={handleSignInClick}
+                btntext='Sign In'/>
               </div>
             <div className="overlay-panel overlay-right">
               <h1>New User?</h1>
               <p>Sign Up using organization email account</p>
-              <button className="ghost" id="signUp" onClick={handleSignUpClick}>
-                Sign Up
-              </button>
+              <Button
+              btnclasses="ghost"
+              btnid="signUp" 
+              btnclick={handleSignUpClick}
+              btntext='Sign Up'/>
             </div>
           </div>
         </div>

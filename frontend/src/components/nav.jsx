@@ -1,4 +1,5 @@
 import React, {useContext} from 'react';
+import Button from './button';
 import { ThemeContext } from './themeContextProvider';
 import './nav.css';
 
@@ -21,17 +22,28 @@ function Nav() {
         </a>
         <div className="navbar-buttons">
           <a href="/home">
-          <button className='btn btn-outline unselectable'>HOME</button>
+          <Button
+          btnclasses='btn btn-outline unselectable'
+          btntext='HOME'
+          />
           </a>
           <a href="/about">
-            <button className='btn btn-outline unselectable'>ABOUT</button>
-
+            <Button
+              btnclasses='btn btn-outline unselectable'
+              btntext='ABOUT'
+            />
           </a>
           <a href="/contact">
-          <button className='btn btn-outline unselectable'>CONTACT US</button>
+            <Button
+              btnclasses='btn btn-outline unselectable'
+              btntext='CONTACT US'
+            />
           </a>
           <a href="/signup">
-          <button className='btn btn-outline unselectable'>SIGN UP</button>
+            <Button
+              btnclasses='btn btn-outline unselectable'
+              btntext='SIGN UP'
+            />
           </a>
           {/* Dark Mode Toggle */}
           <div className="theme-toggle">

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import BackgroundAnimation from '../components/backgroundAnimation';
+import Button from '../components/button';
 import Nav from '../components/nav';
 import teamLogo from '../assets/gadget_labs.svg';
 import './contact.css';
@@ -90,15 +91,21 @@ const Contact = () => {
           />
         </div>
         
-        <button type="submit" className="submit-button">Send Message</button>
+        <Button 
+        btntype="submit" 
+        btnclasses="submit-button" 
+        btntext="Send Message"/>
       </form>
 
       {showDialog && (
         <div className="dialog-overlay" onClick={handleCloseDialog}>
           <div className="dialog-box" onClick={(e) => e.stopPropagation()}>
-            <h3>Message Sent Successfully</h3>
+            <h3 id='popup-header'>Message Sent Successfully</h3>
             <p>Thank you for your message. We'll get back to you soon.</p>
-            <button onClick={handleCloseDialog} className="dialog-close-button">OK</button>
+            <Button 
+            btnclick={handleCloseDialog} 
+            btnclasses="dialog-close-button"
+            btntext="OK"/>
           </div>
         </div>
       )}

@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "./button";
 import "./scrollableList.css";
 
 const ScrollableList = ({ items }) => {
@@ -50,12 +51,11 @@ const ScrollableList = ({ items }) => {
             <div className="grid-cell center">{item.uploadedOn}</div>
             <div className="grid-cell center">{item.size}</div>
             <div className="grid-cell right">
-              <button
-                className="download-button"
-                onClick={() => handleDownload(item.fileId)}
-              >
-                Download
-              </button>
+              <Button
+                btnclasses="download-button"
+                btnclick={() => handleDownload(item.fileId)}
+                btntext="Download"
+              />
             </div>
           </div>
         ))}

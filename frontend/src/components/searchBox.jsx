@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Button from './button';
 import PropTypes from 'prop-types';
 import './searchBox.css';
 
@@ -29,12 +30,12 @@ const SearchBox = ({ placeholder, onSearch }) => {
                 onChange={handleInputChange}
                 onKeyDown={handleKeyPress}
             />
-            <button
-                className="search-box__button"
-                onClick={handleButtonClick}
-            >
-                Search
-            </button>
+            <Button
+                btnclasses="search-box__button"
+                btnclick={handleButtonClick}
+                btntext="Search"
+            />
+            
         </div>
     );
 };
