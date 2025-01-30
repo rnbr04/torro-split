@@ -3,8 +3,10 @@ import BackgroundAnimation from '../components/backgroundAnimation';
 import Nav from '../components/nav';
 import teamLogo from '../assets/gadget_labs.svg';
 import AboutCard from '../components/aboutCard';
-import rick from '../assets/rick.svg';
-import fade from '../assets/kanak.svg';
+import rick from '../assets/rick.png';
+import fade from '../assets/fade.png';
+import gojo from '../assets/gojo.png';
+import ghost from '../assets/ghost2.png';
 
 function About() {
     const teamMembers = [
@@ -18,7 +20,7 @@ function About() {
         },
         {
           name: "Abhinav Parindiyal", 
-          image: "/java.svg",
+          image: ghost,
           qualifications: "Frontend Developer",
           details: "Developed the frontend using React and collaborated on backend integration for seamless user interaction.",
           linkedinUrl: "https://www.linkedin.com/in/abhinav-parindiyal-ba983b25a/",
@@ -26,7 +28,7 @@ function About() {
         },
         {
           name: "Ranbeer Malhotra",
-          image: "/Postgresql.svg", 
+          image: gojo, 
           qualifications: "Frontend Developer",
           details: "Designed the frontend in React and assisted with backend integration to ensure a cohesive user journey.",
           linkedinUrl: "https://www.linkedin.com/in/ranbeer-malhotra-7912a3208/",
