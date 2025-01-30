@@ -141,6 +141,8 @@ left:0;
 right:0;
 bottom:0;
 background-color:#37a5ffd8;
+background-image:url("/clouds.svg");
+background-size:contain;
 transition:.4s;
 border:2px solid var(--slider-border);
 border-radius:15px
@@ -160,7 +162,9 @@ transition:.4s
 }
 
 input:checked + .slider {
-background-color:#394045
+background-color:#394045;
+background-image:url("/stars.svg");
+background-size:contain
 }
 
 input:checked + .slider:before {
