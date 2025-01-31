@@ -6,7 +6,7 @@
 ---
 Tech Stack :
 ---
-<img src="https://github.com/rnbr04/torro-split/raw/main/frontend/public/react.svg" height="50" /> <img src="https://github.com/rnbr04/torro-split/raw/main/frontend/public/java.svg" height="50" /> <img src="https://github.com/rnbr04/torro-split/raw/main/frontend/public/go.svg" height="50" /> <img src="https://github.com/rnbr04/torro-split/raw/main/frontend/public/Postgresql.svg" height="50" /> <img src="https://github.com/rnbr04/torro-split/raw/main/frontend/public/docker.svg" height="50" />
+ <img src="https://github.com/rnbr04/torro-split/raw/main/frontend/public/java.svg" height="50" /> <img src="https://github.com/rnbr04/torro-split/raw/main/frontend/public/go.svg" height="50" /><img src="https://github.com/rnbr04/torro-split/raw/main/frontend/public/react.svg" height="50" /> <img src="https://github.com/rnbr04/torro-split/raw/main/frontend/public/Postgresql.svg" height="50" /> <img src="https://github.com/rnbr04/torro-split/raw/main/frontend/public/docker.svg" height="50" />
 
 ---
   
