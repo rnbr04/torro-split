@@ -40,7 +40,7 @@ function About() {
           qualifications: "Backend developer",
           details: "Worked on Java Spring Boot for backend development alongside Prabal and provided insights for promoting Torro Split.",
           linkedinUrl: "https://www.linkedin.com/in/kanak-rohj-95587a2bb/",
-          githubUrl: "https://github.com/johndoe"
+          githubUrl: "https://github.com/KANAK-ROHJ"
         }
       ];
 
