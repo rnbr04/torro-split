@@ -65,3 +65,4 @@ To enhance efficiency, frequently requested chunks are cached using Redis. This 
 
 ### Conclusion: 
 *Torro Split isn’t just another file-sharing system—it’s a game-changer. By leveraging the principles of torrent technology, it provides organizations with a secure, efficient, and transparent way to manage their sensitive data. Whether you’re dealing with massive datasets or need to ensure compliance and security, Torro Split offers a revolutionary solution for modern enterprise file management.*
+# TorroSplit
