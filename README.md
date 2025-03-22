@@ -131,14 +131,15 @@ git clone https://github.com/rnbr04/torro-split.git
 ### Install Dependencies
 
 For the backend (Java & Go), ensure all dependencies are included in the respective package managers.
+
 For the frontend (React), run:
 
 ```bash
-cd frontend/
-npm install
-npm run dev
+cd frontend && npm install && npm run dev
 ```
-This will start the frontend on `127.0.0.1:5173`.
+
+
+This will go to `frontend/` directory and install required dependencies, then start the frontend on `127.0.0.1:5173`.
 
 
 ### Set Up the Database
