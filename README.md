@@ -115,8 +115,8 @@ Before running Torro Split, ensure you have the following:
 - PostgreSQL
 ```Set up PostgreSQL for database management.```
 
-- Docker (optional)
-```Docker is used for containerizing the application, so ensure Docker and Docker Compose are installed. Set Up OAuth 2.0 & JWT Authentication. Configure OAuth 2.0 for secure user authentication and JWT for token-based access.```
+<!-- - Docker (optional)
+```Docker is used for containerizing the application, so ensure Docker and Docker Compose are installed. Set Up OAuth 2.0 & JWT Authentication. Configure OAuth 2.0 for secure user authentication and JWT for token-based access.``` --> 
 
 ## Installation
 
@@ -133,43 +133,37 @@ git clone https://github.com/rnbr04/torro-split.git
 For the backend (Java & Go), ensure all dependencies are included in the respective package managers.
 For the frontend (React), run:
 
-```js
+```bash
+cd frontend/
 npm install
+npm run dev
 ```
+This will start the frontend on `127.0.0.1:5173`.
+
 
 ### Set Up the Database
 
-Ensure PostgreSQL is running and configure the database credentials in the .env file.
+> Ensure PostgreSQL is running and configure the database. <!-- credentials in the .env file. -->
 
-Run Backend and Frontend Servers
+<!-- > Run Backend and Frontend Servers -->
 
-Run the backend Java & Go services and the React development server.
+> Run the backend Java & Go services and the React development server.
 Start Application
 
-Open the application in your web browser at localhost:3000.
-Architecture
+> Open the application in your web browser at `127.0.0.1:5173` or`localhost:5173`.
 
 
-User Interaction
-File Upload and Download Page
+## Architecture
 
 
-The File Upload Page allows users to upload large files. Once uploaded, the system splits the file into chunks and distributes them across multiple nodes for storage.
+### User Interaction
+- <b>File Upload </b> : The File Upload Page allows users to upload large files. Once uploaded, the system splits the file into chunks and distributes them across multiple nodes for storage.
 
-File Download Page
+- <b>File Download</b> : The File Download Page enables users to download files by retrieving chunks from various nodes. 
+<!-- Users are kept updated in real-time with the download progress. -->
 
-
-The File Download Page enables users to download files by retrieving chunks from various nodes. Users are kept updated in real-time with the download progress.
-
-Outputs
-The Output section shows the progress of file distribution and retrieval.
-
-Chunk Distribution Progress
-
-The system displays real-time updates on how the file is split and distributed across the network.
-Download Progress
-
-As chunks are retrieved from different nodes, the user sees the status of the download process, allowing for efficient file retrieval.
+### Outputs
+The Output section shows the list of files user can download (if they have required permissions).
 
 
 
