@@ -1,5 +1,6 @@
 import React, { useCallback, useState, useRef } from 'react';
 import './fileUpload.css';
+import Button from './button';
 
 const Upload = () => {
   const [isDragging, setIsDragging] = useState(false);
@@ -42,6 +43,37 @@ const Upload = () => {
   const openFileDialog = () => {
     fileInputRef.current?.click();
   };
+
+  const upload = () => {
+    droppedFiles.forEach((f) => {
+      fetch('/upload', {
+        method: 'POST',
+        body: f,
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log('Success:', data);
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+        });
+    });
+    
+    selectedFiles.forEach((f) => {
+      fetch('/upload', {
+        method: 'POST',
+        body: f,
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log('Success:', data);
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+        });
+    });
+  };
+  
 
   return (
     <div className="upload-container">
@@ -94,6 +126,12 @@ const Upload = () => {
           </ul>
         </div>
       )}
+      <Button
+        btnclasses="file-input-label button-holder"
+        btnid='upload-button-final'
+        btnclick={upload}
+        btntext="UPLOAD">
+      </Button>
     </div>
   );
 };
