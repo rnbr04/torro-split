@@ -115,6 +115,9 @@ Before running Torro Split, ensure you have the following:
 - PostgreSQL
 ```Set up PostgreSQL for database management.```
 
+- Redis
+```Redis for caching, under development```
+
 <!-- - Docker (optional)
 ```Docker is used for containerizing the application, so ensure Docker and Docker Compose are installed. Set Up OAuth 2.0 & JWT Authentication. Configure OAuth 2.0 for secure user authentication and JWT for token-based access.``` --> 
 
