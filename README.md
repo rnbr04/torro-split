@@ -47,13 +47,25 @@ Tech Stack :
 At its core, Torro Split mimics the behavior of torrent technology. Here's a breakdown of how it works:
 
 ### **File Splitting**  
-When a user uploads a large file, Torro Split automatically divides it into smaller, manageable chunks to optimize storage and transfer.
+When a user uploads a large file, Torro Split (SpringBoot) server automatically divides it into smaller, manageable chunks to optimize storage and transfer.
 
 ### **Chunk Distribution**  
-These file chunks are distributed across various nodes or servers in the organization's network. This decentralized approach not only enhances security but also ensures that no single server bears the load, improving overall system performance and resilience.
+These file chunks are distributed across various nodes or servers (Go services) in the organization's network. This decentralized approach not only enhances security but also ensures that no single server bears the load, improving overall system performance and resilience.
 
 ### **File Retrieval**  
-When an authorized user requests a file, their credentials are verified using OAuth 2.0 and JWT, ensuring that only legitimate users can access the file. Once authenticated, Torro Split fetches the chunks from different nodes in parallel, significantly speeding up the retrieval process.
+Torro Split retrieves files by fetching chunks from multiple distributed Go nodes, ensuring fast and efficient downloads. The process follows these steps:
+
+- <b>Client Request</b> : The client requests a file by specifying the fileID. The system queries the database to determine the required chunkIDs and their storage locations.
+
+- <b>Chunk Download</b> : Each chunk is fetched by sending a request to the appropriate ChunkServer. The request includes fileID, chunkID, and the expected hash.
+
+- <b>Chunk Verification & Transfer</b> : The ChunkServer checks its database for the requested chunk’s metadata. If found, it reads the chunk file from disk, verifies its size, and sends it to the client. If the chunk is missing or there’s a hash mismatch, the transfer fails.
+
+- <b>Reassembly & Validation</b> : The client receives all chunks and verifies their integrity using the stored hashes. Once all chunks are validated, they are reassembled into the original file.
+
+- <b>Real-Time Progress Updates</b> : The frontend provides real-time updates as chunks are retrieved, ensuring transparency in the download process.
+
+This parallel retrieval approach significantly reduces download time while maintaining data integrity and security.
 
 ### **Real-Time Coordination**  
 With the help of `socket.io`, the system enables real-time updates on the progress of file retrieval. As chunks are downloaded, users can track their progress, ensuring that the entire file is quickly and efficiently retrieved.
@@ -135,6 +147,18 @@ git clone https://github.com/rnbr04/torro-split.git
 
 For the backend (Java & Go), ensure all dependencies are included in the respective package managers.
 
+ After starting SpringBoot server, start go nodes :
+
+```go
+cd services && \
+go run server.go --udp-port 8081 --tcp-port 9091 --chunk-dir ./custom_chunks && \
+go run server.go --udp-port 8082 --tcp-port 9092 --chunk-dir ./custom_chunks && \
+go run server.go --udp-port 8083 --tcp-port 9093 --chunk-dir ./custom_chunks
+```
+
+This will start 3 nodes, which can be customized. 
+
+<br>
 For the frontend (React), run:
 
 ```bash
